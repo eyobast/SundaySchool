@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Almira1612/Sunday-School.git"
+    "url": "git+https://github.com/eyobast/sundaySchool.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Almira1612/Sunday-School/issues"
+    "url": "https://github.com/eyobast/sundaySchool/issues"
   },
-  "homepage": "https://github.com/Almira1612/Sunday-School#readme",
+  "homepage": "https://github.com/eyobast/sundaySchool#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.0",
