@@ -6,9 +6,7 @@ var bodyParser = require('body-parser')
 var env = require('dotenv').load();
 var exphbs = require('express-handlebars')
 var path = require("path");
-var flash = require('connect-flash');
 var port = process.env.PORT || 3000;
-app.use(flash());
 
 //For BodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
