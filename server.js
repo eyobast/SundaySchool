@@ -20,7 +20,7 @@ app.use(passport.initialize());
  
 app.use(passport.session()); // persistent login sessions
 
-var port = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 //For Handlebars
 app.set('views', './views')
 app.engine('hbs', exphbs({
