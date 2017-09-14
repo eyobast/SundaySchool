@@ -7,6 +7,7 @@ var env = require('dotenv').load();
 var exphbs = require('express-handlebars')
 var path = require("path");
 var flash = require('connect-flash');
+var port = process.env.PORT || 3000;
 app.use(flash());
 
 //For BodyParser
@@ -19,8 +20,6 @@ app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true}))
 app.use(passport.initialize());
  
 app.use(passport.session()); // persistent login sessions
-
-var PORT = process.env.PORT || 3000;
 //For Handlebars
 app.set('views', './views')
 app.engine('hbs', exphbs({
@@ -54,7 +53,7 @@ models.sequelize.sync().then(function() {
 });
 
  
-app.listen(3000, function(err) {
+app.listen(port, function(err) {
  
     if (!err)
         console.log("Site is live");
