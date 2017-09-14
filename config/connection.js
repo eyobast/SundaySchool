@@ -23,5 +23,6 @@ if (process.env.JAWSDB_URL) {
 	});
 };
 
+sequelize.connect();
 // Exports the connection for other files to use
 module.exports = sequelize;
