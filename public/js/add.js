@@ -3,16 +3,18 @@
 // When user clicks add-btn
 $("#add-btn").on("click", function(event) {
   event.preventDefault();
+  
+  var firstName=$("#firstName").val().trim();
+  var lastName=$("#lastName").val().trim();
+  if (firstName == "" || lastName == "" || firstName.length<5 || lastName.length<5){
+    alert("Make sure all the fields are filled and they are atleast 5 character long!");
+  }
+  else{
 
-  // if ($("#firstName").val() || ($("#lastName").val()) ==""){
-  //   console.log("pls fill the inputs");
-  // }
-  // else{
-
-  // Make a newStudent object
+  // Make a newStudent object=
   var newStudent = {
-    FirstName: $("#firstName").val().trim(),
-    LastName: $("#lastName").val().trim(),
+    FirstName: firstName,
+    LastName: lastName,
     Level: $("#level").val().trim()
   };
 
@@ -28,5 +30,5 @@ $("#add-btn").on("click", function(event) {
   $("#firstName").val("");
   $("#lastName").val("");
   $("#level").val("");
-  // }
+  }
 });
