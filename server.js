@@ -27,12 +27,6 @@ app.engine('hbs', exphbs({
 }));
 app.set('view engine', '.hbs');
  app.use(express.static(path.join(__dirname, 'public')));
-app.get('/', function(req, res) {
-
-    res.render('signin');
-  
- 
-});
 //Models
 var models = require("./models");
 //Routes
