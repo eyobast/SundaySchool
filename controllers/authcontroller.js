@@ -1,3 +1,4 @@
+var db = require("../models");
 var exports = module.exports = {}
  
 exports.signup = function(req, res) {
@@ -15,6 +16,17 @@ exports.dashboard = function(req, res) {
  
     res.render('dashboard');
  
+}
+
+exports.all = function(req, res) {
+db.student.findAll({}).then(function(results) {
+	var hbsObject = {
+		students: results
+	}
+	res.render('all', hbsObject);
+  });
+	
+
 }
 
 exports.logout = function(req, res) {

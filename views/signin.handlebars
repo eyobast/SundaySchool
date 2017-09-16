@@ -5,6 +5,7 @@
 			<title>Sunday School Login</title>
 			<link rel="stylesheet" href="./assets/css/school_style.css" media="screen" title="no title">
 			<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+			<script src="https://code.jquery.com/jquery.js"></script>
 	</head>
 		<body>
 			<style>
@@ -24,15 +25,16 @@
 	                {{/if}}
 					<form id="signin" name="signin" method="post" action="/signin" >
 		        		<p><label for="email">Email Address</label>
-		       			<input class="text" name="email" type="text" /></p>
+		       			<input id="email" class="text" name="email" type="text" /></p>
 		        		<p><label for="password">Password</label>
-		        		<input name="password" type="password" /></p><br><br>
-		        		<input class="btn" type="submit" value="Sign In"  />
+		        		<input id="password" name="password" type="password" /></p><br><br>
+		        		<input id="signinBtn" class="btn" type="submit" value="Sign In"  />
 		        		
 	    			</form>
 	    			<a class="btn" type="submit" value="Create Account" id="/signup" href="/signup" > Create account </a>
 				
 				</div>
 			</div>
+			
 		</body>
 </html>

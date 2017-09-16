@@ -20,22 +20,27 @@ app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true}))
 app.use(passport.initialize());
  
 app.use(passport.session()); // persistent login sessions
+
+ app.use(express.static(path.join(__dirname, 'public')));
 //For Handlebars
 app.set('views', './views')
-app.engine('hbs', exphbs({
-    extname: '.hbs'
+app.engine('handlebars', exphbs({
+    extname: '.handlebars'
 }));
-app.set('view engine', '.hbs');
- app.use(express.static(path.join(__dirname, 'public')));
+
+app.set('view engine', 'handlebars');
+
+
+
 //Models
 var models = require("./models");
 //Routes
-
-var authRoute = require('./routes/auth.js')(app,passport);
-require("./routes/api-routes.js")(app);
-require("./routes/html-routes.js")(app);
 //load passport strategies
 require('./config/passport/passport.js')(passport, models.user);
+require('./routes/auth.js')(app,passport);
+require("./routes/api-routes.js")(app);
+// require("./routes/html-routes.js")(app);
+
 //Sync Database
 models.sequelize.sync().then(function() {
  

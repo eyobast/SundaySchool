@@ -1,13 +1,12 @@
 // The code in add.js handles what happens when the user clicks the "Add a book" button.
-
 // When user clicks add-btn
 $("#add-btn").on("click", function(event) {
   event.preventDefault();
   
   var firstName=$("#firstName").val().trim();
   var lastName=$("#lastName").val().trim();
-  if (firstName == "" || lastName == "" || firstName.length<5 || lastName.length<5){
-    alert("Make sure all the fields are filled and they are atleast 5 character long!");
+  if (firstName == "" || lastName == "" || firstName.length<3 || lastName.length<3){
+    alert("Make sure all the fields are filled and they are atleast 3 character long!");
   }
   else{
 
