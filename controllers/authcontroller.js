@@ -7,7 +7,8 @@ exports.signup = function(req, res) {
 }
 exports.signin = function(req, res) {
  
-    res.render('signin');
+    // res.render('signin');
+    res.send("testing singin get router");
  
 }
 exports.dashboard = function(req, res) {
