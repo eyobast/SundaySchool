@@ -6,7 +6,7 @@ var bodyParser = require('body-parser')
 var env = require('dotenv').load();
 var exphbs = require('express-handlebars')
 var path = require("path");
-var port = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 var flash = require('connect-flash');
 app.use(flash());
 
@@ -53,7 +53,7 @@ models.sequelize.sync().then(function() {
 });
 
  
-app.listen(port, function(err) {
+app.listen(PORT, function(err) {
  
     if (!err)
         console.log("Site is live");
